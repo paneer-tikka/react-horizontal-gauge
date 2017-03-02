@@ -1,0 +1,35 @@
+{
+  "name": "react-horizontal-gauge",
+  "version": "0.0.1",
+  "description": "Horizontal gauge for React",
+  "main": "dist/react-horizontal-gauge.js",
+  "scripts": {
+    "prepublish": "npm run build:umd",
+    "build": "webpack src/react-horizontal-gauge.js dist/react-horizontal-gauge.js",
+    "build:umd": "npm run build && cross-env NODE_ENV=production webpack src/react-horizontal-gauge.js dist/react-horizontal-gauge.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skarpyak/react-horizontal-gauge.git"
+  },
+  "keywords": [
+    "react",
+    "react-component",
+    "horizontal-gauge"
+  ],
+  "author": "SK <skarpyak@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skarpyak/react-horizontal-gauge/issues"
+  },
+  "homepage": "https://github.com/skarpyak/react-horizontal-gauge",
+  "peerDependencies": {
+    "react": ">=0.14.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-loader": "^5.4.0",
+    "cross-env": "=2.0.1",
+    "webpack": "^1.12.9"
+  }
+}
