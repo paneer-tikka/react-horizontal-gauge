@@ -1,6 +1,6 @@
 # react-horizontal-gauge
 
-Horizontal gauge for React
+Horizontal SVG gauge component for React, inspired by [react-linear-gauge](https://github.com/moisbo/react-linear-gauge)
 
 ## Install
 
