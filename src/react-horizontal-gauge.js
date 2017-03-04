@@ -41,7 +41,7 @@ export default (props) => {
         <rect x={props.box.x1} y={props.box.y1} width={props.box.x2} height={props.box.y2} fill="url(#gradient)"></rect>
       </g>
       <g>
-        <text textAnchor="middle" x={calcAxisPos(props.value)} y={props.axis.y1} fontSize="12" fill="#003e6f">
+        <text textAnchor="middle" x={calcAxisPos(props.value)} y={props.axis.y1} fontSize="12" fill="#000">
           {props.value}
         </text>
       </g>
@@ -55,19 +55,20 @@ export default (props) => {
         }
       </g>
       <g>
-        <line y1={props.box.y1} x1={calcAxisPos(props.value)} y2={"70%"} x2={calcAxisPos(props.value)} strokeWidth="1" stroke="#003e6f"></line>
+        <line y1={props.box.y1} x1={calcAxisPos(props.value)} y2={"70%"} x2={calcAxisPos(props.value)} strokeWidth="1" stroke="#000"></line>
       </g>
       <g>
         <polygon points={
-          (calcAxisPos(props.value) - 4) + "," + props.height * 0.30 + " " +
-          calcAxisPos(props.value) + "," + props.height * 0.4 + " " +
-          (calcAxisPos(props.value) + 4) + "," + props.height * 0.30
-        } fill="#003e6f" stroke="purple" stroke-width="5" />
+          calcAxisPos(props.value) + "," + (props.height * 0.5 - 4) + " " +
+          (calcAxisPos(props.value) - 4) + "," + props.height * 0.5 + " " +
+          calcAxisPos(props.value) + "," + (props.height * 0.5 + 4) + " " +
+          (calcAxisPos(props.value) + 4) + "," + props.height * 0.5
+        } fill="#000" stroke="purple" stroke-width="5" />
       </g>
       <g>{
         props.ticks.map((item) => {
           return (
-            <text textAnchor="middle" x={calcAxisPos(item.value)} y={props.height} fontSize="12" fill="#003e6f">
+            <text textAnchor="middle" x={calcAxisPos(item.value)} y={props.height} fontSize="12" fill="#000">
               {item.label}
             </text>
           )

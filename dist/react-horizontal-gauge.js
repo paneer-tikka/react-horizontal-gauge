@@ -117,7 +117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      null,
 	      _react2["default"].createElement(
 	        "text",
-	        { textAnchor: "middle", x: calcAxisPos(props.value), y: props.axis.y1, fontSize: "12", fill: "#003e6f" },
+	        { textAnchor: "middle", x: calcAxisPos(props.value), y: props.axis.y1, fontSize: "12", fill: "#000" },
 	        props.value
 	      )
 	    ),
@@ -131,12 +131,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _react2["default"].createElement(
 	      "g",
 	      null,
-	      _react2["default"].createElement("line", { y1: props.box.y1, x1: calcAxisPos(props.value), y2: "70%", x2: calcAxisPos(props.value), strokeWidth: "1", stroke: "#003e6f" })
+	      _react2["default"].createElement("line", { y1: props.box.y1, x1: calcAxisPos(props.value), y2: "70%", x2: calcAxisPos(props.value), strokeWidth: "1", stroke: "#000" })
 	    ),
 	    _react2["default"].createElement(
 	      "g",
 	      null,
-	      _react2["default"].createElement("polygon", { points: calcAxisPos(props.value) - 4 + "," + props.height * 0.30 + " " + calcAxisPos(props.value) + "," + props.height * 0.4 + " " + (calcAxisPos(props.value) + 4) + "," + props.height * 0.30, fill: "#003e6f", stroke: "purple", "stroke-width": "5" })
+	      _react2["default"].createElement("polygon", { points: calcAxisPos(props.value) + "," + (props.height * 0.5 - 4) + " " + (calcAxisPos(props.value) - 4) + "," + props.height * 0.5 + " " + calcAxisPos(props.value) + "," + (props.height * 0.5 + 4) + " " + (calcAxisPos(props.value) + 4) + "," + props.height * 0.5, fill: "#000", stroke: "purple", "stroke-width": "5" })
 	    ),
 	    _react2["default"].createElement(
 	      "g",
@@ -144,7 +144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      props.ticks.map(function (item) {
 	        return _react2["default"].createElement(
 	          "text",
-	          { textAnchor: "middle", x: calcAxisPos(item.value), y: props.height, fontSize: "12", fill: "#003e6f" },
+	          { textAnchor: "middle", x: calcAxisPos(item.value), y: props.height, fontSize: "12", fill: "#000" },
 	          item.label
 	        );
 	      })
