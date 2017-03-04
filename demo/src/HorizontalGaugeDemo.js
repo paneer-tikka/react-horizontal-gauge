@@ -1,5 +1,5 @@
 import React  from "react";
-import HorizontalGauge from "./react-horizontal-gauge";
+import HorizontalGauge from "react-horizontal-gauge";
 
 export default () => {
 
