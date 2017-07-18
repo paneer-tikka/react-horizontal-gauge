@@ -52,17 +52,17 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	var _react = __webpack_require__(1);
 
@@ -74,12 +74,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: 0,
 	  max: 100,
 	  min: 0,
+	  min_color: 'green',
+	  mid_color: 'yellow',
+	  max_color: 'red',
+	  show_value_label: true,
 	  box: { x1: "2%", x2: "96%", y1: "30%", y2: "40%", widthK: 0.96 },
 	  axis: { x1: "2%", x2: "98%", y1: "20%", y2: "80%", widthK: 0.98 },
 	  ticks: [{ label: '0', value: 0 }, { label: '50', value: 50 }, { label: '100', value: 100 }]
 	};
 
-	exports["default"] = function (props) {
+	exports['default'] = function (props) {
 
 	  props = _extends({}, defaultProps, props);
 
@@ -93,58 +97,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 
-	  return _react2["default"].createElement(
-	    "svg",
+	  return _react2['default'].createElement(
+	    'svg',
 	    { width: props.width, height: props.height },
-	    _react2["default"].createElement(
-	      "defs",
+	    _react2['default'].createElement(
+	      'defs',
 	      null,
-	      _react2["default"].createElement(
-	        "linearGradient",
-	        { id: "gradient", x1: props.box.x1, y1: props.box.y1, x2: props.box.x2, y2: props.box.y1, spreadMethod: "pad" },
-	        _react2["default"].createElement("stop", { offset: "0%", stopColor: "green", stopOpacity: "1" }),
-	        _react2["default"].createElement("stop", { offset: "50%", stopColor: "yellow", stopOpacity: "1" }),
-	        _react2["default"].createElement("stop", { offset: "100%", stopColor: "red", stopOpacity: "1" })
+	      _react2['default'].createElement(
+	        'linearGradient',
+	        { id: 'gradient', x1: props.box.x1, y1: props.box.y1, x2: props.box.x2, y2: props.box.y1, spreadMethod: 'pad' },
+	        _react2['default'].createElement('stop', { offset: '0%', stopColor: props.min_color, stopOpacity: '1' }),
+	        _react2['default'].createElement('stop', { offset: '50%', stopColor: props.mid_color, stopOpacity: '1' }),
+	        _react2['default'].createElement('stop', { offset: '100%', stopColor: props.max_color, stopOpacity: '1' })
 	      )
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
-	      _react2["default"].createElement("rect", { x: props.box.x1, y: props.box.y1, width: props.box.x2, height: props.box.y2, fill: "url(#gradient)" })
+	      _react2['default'].createElement('rect', { x: props.box.x1, y: props.box.y1, width: props.box.x2, height: props.box.y2, fill: 'url(#gradient)' })
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
-	      _react2["default"].createElement(
-	        "text",
-	        { textAnchor: "middle", x: calcAxisPos(props.value), y: props.axis.y1, fontSize: "12", fill: "#000" },
+	      props.show_value_label && _react2['default'].createElement(
+	        'text',
+	        { textAnchor: 'middle', x: calcAxisPos(props.value), y: props.axis.y1, fontSize: '12', fill: '#000' },
 	        props.value
 	      )
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
 	      props.ticks.map(function (item) {
-	        return _react2["default"].createElement("line", { y1: props.axis.y1, x1: calcAxisPos(item.value), y2: props.axis.y2, x2: calcAxisPos(item.value), strokeWidth: "2", stroke: "#fff" });
+	        return _react2['default'].createElement('line', { y1: props.axis.y1, x1: calcAxisPos(item.value), y2: props.axis.y2, x2: calcAxisPos(item.value), strokeWidth: '2', stroke: '#fff' });
 	      })
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
-	      _react2["default"].createElement("line", { y1: props.box.y1, x1: calcAxisPos(props.value), y2: "70%", x2: calcAxisPos(props.value), strokeWidth: "1", stroke: "#000" })
+	      _react2['default'].createElement('line', { y1: props.box.y1, x1: calcAxisPos(props.value), y2: "70%", x2: calcAxisPos(props.value), strokeWidth: '1', stroke: '#000' })
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
-	      _react2["default"].createElement("polygon", { points: calcAxisPos(props.value) + "," + (props.height * 0.5 - 4) + " " + (calcAxisPos(props.value) - 4) + "," + props.height * 0.5 + " " + calcAxisPos(props.value) + "," + (props.height * 0.5 + 4) + " " + (calcAxisPos(props.value) + 4) + "," + props.height * 0.5, fill: "#000", stroke: "purple", "stroke-width": "5" })
+	      _react2['default'].createElement('polygon', { points: calcAxisPos(props.value) + "," + (props.height * 0.5 - 4) + " " + (calcAxisPos(props.value) - 4) + "," + props.height * 0.5 + " " + calcAxisPos(props.value) + "," + (props.height * 0.5 + 4) + " " + (calcAxisPos(props.value) + 4) + "," + props.height * 0.5, fill: '#000', stroke: '#3458e4', strokeWidth: '7' })
 	    ),
-	    _react2["default"].createElement(
-	      "g",
+	    _react2['default'].createElement(
+	      'g',
 	      null,
 	      props.ticks.map(function (item) {
-	        return _react2["default"].createElement(
-	          "text",
-	          { textAnchor: "middle", x: calcAxisPos(item.value), y: props.height, fontSize: "12", fill: "#000" },
+	        return _react2['default'].createElement(
+	          'text',
+	          { textAnchor: 'middle', x: calcAxisPos(item.value), y: props.height, fontSize: '12', fill: '#000' },
 	          item.label
 	        );
 	      })
@@ -152,15 +156,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	  );
 	};
 
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	module.exports = __WEBPACK_EXTERNAL_MODULE_1__;
 
-/***/ }
+/***/ })
 /******/ ])
 });
 ;
