@@ -102,9 +102,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _react2["default"].createElement(
 	        "linearGradient",
 	        { id: "gradient", x1: props.box.x1, y1: props.box.y1, x2: props.box.x2, y2: props.box.y1, spreadMethod: "pad" },
-	        _react2["default"].createElement("stop", { offset: "0%", stopColor: "red", stopOpacity: "1" }),
+	        _react2["default"].createElement("stop", { offset: "0%", stopColor: "green", stopOpacity: "1" }),
 	        _react2["default"].createElement("stop", { offset: "50%", stopColor: "yellow", stopOpacity: "1" }),
-	        _react2["default"].createElement("stop", { offset: "100%", stopColor: "green", stopOpacity: "1" })
+	        _react2["default"].createElement("stop", { offset: "100%", stopColor: "red", stopOpacity: "1" })
 	      )
 	    ),
 	    _react2["default"].createElement(
